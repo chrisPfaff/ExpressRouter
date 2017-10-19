@@ -1,0 +1,31 @@
+.itemContainer {
+  text-align: center;
+}
+
+.list-div {
+  position: absolute;
+  padding: 20px 20px 20px 20px;
+  margin: 30px 300px 0px 300px;
+  box-shadow:10px 5px 5px black;
+  border-style: solid;
+}
+
+.items {
+  font-style: oblique;
+  font-size: 29px;
+  font-weight: bold;
+}
+
+.bottomFooter {
+ position: absolute;
+ right: 0;
+ bottom: 0;
+ left: 0;
+ padding: 1rem;
+ background-color: #efefef;
+ text-align: center;
+}
+
+.navbar-brand {
+  padding-bottom: 20px;
+}
