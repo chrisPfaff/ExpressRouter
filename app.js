@@ -24,7 +24,7 @@ app.use(methodOverride(function (req, res) {
     return method;
   }
 }));
-app.use('/item', routes);
+app.use('/', routes);
 
 app.use(function(err, req, res, next) {
   res.status(err.status || 500);
