@@ -35,6 +35,6 @@ app.use(function(err, req, res, next) {
   });
 });
 
-app.listen(port, function() {
+app.listen(process.env.PORT || port, function() {
   console.log("listening on port 3000");
 });
