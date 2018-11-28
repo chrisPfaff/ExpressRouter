@@ -10,6 +10,7 @@ let port = 3000;
 let routes = require("./routes/item");
 
 app.set("view engine", "ejs");
+require("dotenv").config();
 
 app.use(morgan("tiny"));
 app.use(express.static(__dirname + "/public"));

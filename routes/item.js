@@ -1,6 +1,7 @@
 let express = require("express");
 let router = express.Router();
-
+require("dotenv").config();
+const getImage = require("../controllers/getImageController");
 router.use(express.static(__dirname + "/public"));
 
 let groceryList = [["Ham", 1], ["Cheese", 2]];

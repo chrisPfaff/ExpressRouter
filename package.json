@@ -10,11 +10,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^6.1.0",
     "ejs": "^2.5.7",
     "express": "^4.16.2",
     "method-override": "^2.3.10",
     "mongoose": "^4.12.3",
     "morgan": "^1.9.1",
-    "request": "^2.88.0"
+    "node-fetch": "^2.3.0",
+    "request": "^2.88.0",
+    "unsplash-js": "^4.8.0"
   }
 }
