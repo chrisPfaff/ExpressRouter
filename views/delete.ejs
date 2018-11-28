@@ -8,14 +8,14 @@
   <title>Document</title>
   <% include ./partials/head %>
 </head>
-<body class="container">
+<body>
   <header>
     <% include ./partials/header %>
   </header>
   <div class="container">
     <div class="list-div">
     <h1>Delete Item</h1>
-    <form action="/item/delete/id" method="POST">
+    <form class="card" action="/item/delete/id" method="POST">
       <input type="hidden" name="_method" value="DELETE"/>
       <input type="text" name="item">
       <input type="submit">

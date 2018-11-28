@@ -8,14 +8,14 @@
   <title>Document</title>
   <% include ./partials/head %>
 </head>
-<body class="container">
+<body>
   <header>
     <% include ./partials/header %>
   </header>
   <div class="container">
     <div class="list-div">
     <h1>Add New Item</h1>
-    <form action="/item" method="POST">
+    <form action="/item" method="post">
       <input type="text" name="item">
       <input type="submit">
     </div>
