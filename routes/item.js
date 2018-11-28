@@ -39,11 +39,9 @@ router.get("/edit", function(req, res) {
 router.post("/item/edit/:id", function(req, res) {
   var oldItem = req.body.item;
   var newItem = req.body.newItem;
-  console.log(newItem, oldItem);
   groceryList.forEach(function(listItems, index) {
     if (oldItem === listItems[0]) {
       var id = listItems[1];
-      console.log(newItem);
       groceryList.splice(index, 1);
       groceryList.splice(index, 0, [newItem, id]);
       res.redirect("/");
@@ -53,7 +51,6 @@ router.post("/item/edit/:id", function(req, res) {
 });
 
 router.post("/item", function(req, res) {
-  console.log(req.body.item);
   groceryList.push([req.body.item, id]);
   id++;
   res.redirect("/");
@@ -67,7 +64,6 @@ router.get("/delete", function(req, res) {
 
 router.delete("/item/delete/:id", function(req, res) {
   var item = req.body.item;
-  console.log(req);
   groceryList.forEach(function(listItems, index) {
     if (item === listItems[0]) {
       groceryList.splice(index, 1);
