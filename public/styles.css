@@ -18,12 +18,22 @@
   flex-direction: column;
   box-shadow: 0 15px 10px #777;
   margin: 0 auto;
+  margin-top: 100px;
   padding: 40px;
 }
 .card h3 {
   text-align: center;
 }
 
+.card-body {
+  text-align: center;
+}
+
 .list-group {
   text-align: center;
+  padding-top: 10px;
+}
+
+.delete-form {
+  padding-left: 10px;
 }
