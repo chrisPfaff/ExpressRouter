@@ -1,11 +1,12 @@
 let express = require("express");
 let router = express.Router();
 require("dotenv").config();
-const getImage = require("../controllers/getImageController");
+const fetch = require("node-fetch");
+//const getImage = require("../controllers/getImageController");
 router.use(express.static(__dirname + "/public"));
 
-let groceryList = [["Ham", 1], ["Cheese", 2]];
-let id = 3;
+let groceryList = [];
+let id = 0;
 
 router.get("/", function(req, res) {
   res.render("items", {
@@ -51,8 +52,22 @@ router.post("/item/edit/:id", function(req, res) {
   res.render("notFound");
 });
 
-router.post("/item", function(req, res) {
-  groceryList.push([req.body.item, id]);
+router.post("/item", async function(req, res) {
+  console.log(req.body.item);
+  let url = await fetch(
+    `https://api.unsplash.com/search/photos/?page=1&per_page=10&query=${
+      req.body.item
+    }&client_id=${process.env.API_KEY}`
+  )
+    .then(data => {
+      return data.json();
+    })
+    .then(item => {
+      return item.results[0].urls.thumb;
+    });
+
+  groceryList.push([url, req.body.item, id]);
+  console.log(groceryList);
   id++;
   res.redirect("/");
 });
@@ -66,7 +81,8 @@ router.get("/delete", function(req, res) {
 router.delete("/item/delete/:id", function(req, res) {
   var item = req.body.item;
   groceryList.forEach(function(listItems, index) {
-    if (item === listItems[0]) {
+    console.log(listItems);
+    if (item === listItems[1]) {
       groceryList.splice(index, 1);
       res.redirect("/");
     }

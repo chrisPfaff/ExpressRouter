@@ -19,8 +19,9 @@
         </form>
         <h4 class="card-title">Grocery List Items</h4>
         <ul class="list-group">
-          <% groceryListItems.forEach(function(item) { %>
-          <li class="list-group-item"><%= item[0] %></li>
+          <% groceryListItems.forEach(function(item) { %> <% let x = item[0] %>
+          <img class="list-img" src="<%= x %>" />
+          <li class="list-group-item"><%= item[1] %></li>
           <% }); %>
         </ul>
       </div>

@@ -15,7 +15,9 @@
       <div class="card-body">
         <ul class="list-group">
           <% groceryListItems.forEach(function(item) { %>
-          <li class="list-group-item"><%= item[0] %></li>
+          <% let x = item[0] %>
+          <img class="list-img" src="<%= x %>" />
+          <li class="list-group-item"><%= item[1] %></li>
           <% }); %>
         </ul>
       </div>
