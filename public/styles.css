@@ -13,7 +13,7 @@
 
 .card {
   background-color: antiquewhite;
-  width: 500px;
+  width: 470px;
   display: flex;
   flex-direction: column;
   box-shadow: 0 15px 10px #777;
@@ -29,6 +29,10 @@
   text-align: center;
 }
 
+.title {
+  text-align: center;
+}
+
 .list-group {
   text-align: center;
   padding-top: 10px;
@@ -39,7 +43,8 @@
 }
 
 .list-img {
-  margin-top: 20px;
+  text-align: center;
+  margin: 0 auto;
   margin-bottom: 20px;
   height: 250px;
   width: 300px;

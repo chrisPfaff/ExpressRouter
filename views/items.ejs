@@ -10,14 +10,15 @@
   </head>
   <body>
     <header><% include ./partials/header %></header>
-    <div class="card">
-      <h3 class="card-title">Grocery List Items</h3>
+      <h3 class="title">Grocery List Items</h3>
       <div class="card-body">
         <ul class="list-group">
           <% groceryListItems.forEach(function(item) { %>
           <% let x = item[0] %>
+          <div class="card">
           <img class="list-img" src="<%= x %>" />
           <li class="list-group-item"><%= item[1] %></li>
+          </div>
           <% }); %>
         </ul>
       </div>

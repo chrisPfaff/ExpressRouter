@@ -38,14 +38,26 @@ router.get("/edit", function(req, res) {
   res.render("edit", { groceryListItems: groceryList });
 });
 
-router.post("/item/edit/:id", function(req, res) {
+router.post("/item/edit/:id", async function(req, res) {
   var oldItem = req.body.item;
   var newItem = req.body.newItem;
+  let x = await fetch(
+    `https://api.unsplash.com/search/photos/?page=1&per_page=10&query=${
+      req.body.newItem
+    }&client_id=${process.env.API_KEY}`
+  )
+    .then(data => {
+      return data.json();
+    })
+    .then(item => {
+      return item.results[0].urls.thumb;
+    });
   groceryList.forEach(function(listItems, index) {
-    if (oldItem === listItems[0]) {
-      var id = listItems[1];
+    if (oldItem === listItems[1]) {
+      var id = listItems[2];
       groceryList.splice(index, 1);
-      groceryList.splice(index, 0, [newItem, id]);
+      groceryList.splice(index, 0, [x, newItem, id]);
+      console.log(x);
       res.redirect("/");
     }
   });
@@ -53,7 +65,6 @@ router.post("/item/edit/:id", function(req, res) {
 });
 
 router.post("/item", async function(req, res) {
-  console.log(req.body.item);
   let url = await fetch(
     `https://api.unsplash.com/search/photos/?page=1&per_page=10&query=${
       req.body.item
