@@ -1,8 +1,8 @@
 const fetch = require("node-fetch");
 
-async function getImage(query) {
-  await fetch(
-    `https://api.unsplash.com/search/photos/?page=1&per_page=10&query=dog&client_id=${
+function getImage(query) {
+  fetch(
+    `https://api.unsplash.com/search/photos/?page=1&per_page=10&query=${query}&client_id=${
       process.env.API_KEY
     }`
   )
@@ -10,7 +10,7 @@ async function getImage(query) {
       return data.json();
     })
     .then(item => {
-      console.log(item.results[0].urls.thumb);
+      return item.results[0].urls.thumb;
     });
 }
 
