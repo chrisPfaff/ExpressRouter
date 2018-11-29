@@ -37,3 +37,11 @@
 .delete-form {
   padding-left: 10px;
 }
+
+.list-img {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 250px;
+  width: 300px;
+  box-shadow: 2px 2px black;
+}
