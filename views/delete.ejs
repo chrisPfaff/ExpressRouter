@@ -11,16 +11,17 @@
   <body>
     <header><% include ./partials/header %></header>
     <h3 class="title">Delete Items</h3>
-    <form action="/item/delete/id" method="POST">
+    <form class="delete-form" action="/item/delete/id" method="POST">
       <input type="hidden" name="_method" value="DELETE" />
       <input type="text" name="item" /> <input class="submit" type="submit" />
     </form>
     <div class="card-body">
-      <div class="card">
         <ul class="list-group">
           <% groceryListItems.forEach(function(item) { %> <% let x = item[0] %>
+          <div class="card">
           <img class="list-img" src="<%= x %>" />
           <li class="list-group-item"><%= item[1] %></li>
+          </div>
           <% }); %>
         </ul>
       </div>

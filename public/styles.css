@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Righteous");
+
 .header {
   padding: 12px;
   background-color: #848484;
@@ -6,7 +8,7 @@
 .footer {
   background-color: #848484;
   position: fixed;
-  height: 35px;
+  height: 20px;
   bottom: 0;
   width: 100%;
   text-align: center;
@@ -14,6 +16,7 @@
 
 .nav-item {
   color: black;
+  font-family: "Righteous", cursive;
 }
 
 .card {
@@ -25,7 +28,7 @@
   flex-direction: column;
   box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.45);
   margin: 0 auto;
-  margin-top: 100px;
+  margin-top: 50px;
   padding: 20px;
 }
 .card h3 {
@@ -38,9 +41,14 @@
 
 .card-title {
   color: black;
+  font-family: "Righteous", cursive;
 }
+
 .title {
   text-align: center;
+  padding-top: 15px;
+  font-family: "Righteous", cursive;
+  font-size: 40px;
 }
 
 .list-group {
@@ -67,4 +75,12 @@
 
 .submit {
   color: #838383;
+}
+
+.submit:hover {
+  background-color: black;
+  color: #848484;
+}
+.delete-form {
+  text-align: center;
 }
