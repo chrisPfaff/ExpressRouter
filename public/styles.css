@@ -1,25 +1,32 @@
 .header {
-  padding-top: 10px;
-  background-color: lightblue;
+  padding: 12px;
+  background-color: #848484;
 }
 
 .footer {
-  background-color: lightblue;
+  background-color: #848484;
   position: fixed;
   height: 35px;
   bottom: 0;
   width: 100%;
+  text-align: center;
+}
+
+.nav-item {
+  color: black;
 }
 
 .card {
-  background-color: antiquewhite;
+  background-color: #838383;
+  border-radius: 4px;
+  color: white;
   width: 470px;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 15px 10px #777;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.45);
   margin: 0 auto;
   margin-top: 100px;
-  padding: 40px;
+  padding: 20px;
 }
 .card h3 {
   text-align: center;
@@ -29,6 +36,9 @@
   text-align: center;
 }
 
+.card-title {
+  color: black;
+}
 .title {
   text-align: center;
 }
@@ -36,6 +46,10 @@
 .list-group {
   text-align: center;
   padding-top: 10px;
+}
+
+.list-group-item {
+  color: black;
 }
 
 .delete-form {
@@ -49,4 +63,8 @@
   height: 250px;
   width: 300px;
   box-shadow: 2px 2px black;
+}
+
+.submit {
+  color: #838383;
 }

@@ -10,14 +10,13 @@
   </head>
   <body>
     <header><% include ./partials/header %></header>
-    <div class="card">
-      <h3 class="card-title">Delete Item</h3>
-      <div class="card-body">
-        <form action="/item/delete/id" method="POST">
-          <input type="hidden" name="_method" value="DELETE" />
-          <input type="text" name="item" /> <input type="submit" />
-        </form>
-        <h4 class="card-title">Grocery List Items</h4>
+    <h3 class="title">Delete Items</h3>
+    <form action="/item/delete/id" method="POST">
+      <input type="hidden" name="_method" value="DELETE" />
+      <input type="text" name="item" /> <input class="submit" type="submit" />
+    </form>
+    <div class="card-body">
+      <div class="card">
         <ul class="list-group">
           <% groceryListItems.forEach(function(item) { %> <% let x = item[0] %>
           <img class="list-img" src="<%= x %>" />
