@@ -12,19 +12,20 @@
   <header>
     <% include ./partials/header %>
   </header>
-  <div class="card">
-  <h3 class="card-title">Edit Item</h3>
+  <h3 class="title">Edit Item</h3>
+  <form class="edit-form" action="/item/edit/id" method="post">
+    <input type="text" name="item" value="" placeholder="Old Item To Replace">
+    <input type="text" name="newItem" value="" placeholder="New Item">
+    <input class="submit" type="submit">
     <div class="card-body">
-      <form action="/item/edit/id" method="post">
-        <input type="text" name="item" value="" placeholder="Old Item To Replace">
-        <input type="text" name="newItem" value="" placeholder="New Item">
-        <input class="submit" type="submit">
       <ul class="list-group">
         <% groceryListItems.forEach(function(item) { %>
           <% let x = item[0]
             %>
+            <div class="card">
             <img class="list-img" src="<%= x %>" />
           <li class="list-group-item"><%= item[1] %></li>
+        </div>
         <% }); %>
       </ul>
     </div>

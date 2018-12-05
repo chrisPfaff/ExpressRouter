@@ -2,11 +2,11 @@
 
 .header {
   padding: 12px;
-  background-color: #848484;
+  background-color: #dcdcdc;
 }
 
 .footer {
-  background-color: #848484;
+  background-color: #dcdcdc;
   position: fixed;
   height: 20px;
   bottom: 0;
@@ -20,13 +20,14 @@
 }
 
 .card {
-  background-color: #838383;
+  background-color: #dcdcdc;
   border-radius: 4px;
   color: white;
   width: 470px;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.11),
+    0 5px 15px 0 rgba(0, 0, 0, 0.08);
   margin: 0 auto;
   margin-top: 50px;
   padding: 20px;
@@ -65,12 +66,14 @@
 }
 
 .list-img {
+  border-radius: 3px;
   text-align: center;
   margin: 0 auto;
   margin-bottom: 20px;
   height: 250px;
   width: 300px;
   box-shadow: 2px 2px black;
+  object-fit: cover;
 }
 
 .submit {
@@ -82,5 +85,9 @@
   color: #848484;
 }
 .delete-form {
+  text-align: center;
+}
+
+.edit-form {
   text-align: center;
 }
