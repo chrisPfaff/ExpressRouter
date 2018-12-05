@@ -44,7 +44,7 @@ router.post("/item/edit/:id", async function(req, res) {
   let x = await fetch(
     `https://api.unsplash.com/search/photos/?page=1&per_page=10&query=${
       req.body.newItem
-    }&client_id=56a8c9d796660313c8daa6151a736a75876acd49618bb1896b308a5151e4b27e`
+    }&client_id=${process.env.API_KEY}`
   )
     .then(data => {
       return data.json();
@@ -69,7 +69,7 @@ router.post("/item", async function(req, res) {
   let url = await fetch(
     `https://api.unsplash.com/search/photos/?page=1&per_page=10&query=${
       req.body.item
-    }&client_id=56a8c9d796660313c8daa6151a736a75876acd49618bb1896b308a5151e4b27e`
+    }&client_id=${process.env.API_KEY}`
   )
     .then(data => {
       return data.json();
