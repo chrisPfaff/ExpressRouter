@@ -10,20 +10,19 @@
   </head>
   <body>
     <header><% include ./partials/header %></header>
-    <div class="card">
-      <h3 class="card-title">Get Item</h3>
+    <h3 class="title">Get Item</h3>
+    <form class="get-form" action="/item/get/id" method="get">
+      <input type="text" name="item" /> <input class="submit" type="submit" />
+    </form>
       <div class="card-body">
-        <form action="/item/get/id" method="get">
-          <input type="text" name="item" />
-          <input class="submit" type="submit" />
-          <ul class="list-group">
-            <% groceryListItems.forEach(function(item) { %> <% let x = item[0]
-            %>
+        <ul class="list-group">
+          <% groceryListItems.forEach(function(item) { %> <% let x = item[0] %>
+          <div class="card">
             <img class="list-img" src="<%= x %>" />
             <li class="list-group-item"><%= item[1] %></li>
-            <% }); %>
-          </ul>
-        </form>
+          </div>
+          <% }); %>
+        </ul>
       </div>
     </div>
     <footer class="bottomFooter"><% include ./partials/footer %></footer>

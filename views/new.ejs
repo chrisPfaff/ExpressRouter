@@ -10,15 +10,12 @@
   </head>
   <body>
     <header><% include ./partials/header %></header>
-    <div class="card">
-      <h3 class="card-title">Add New Item</h3>
-      <div class="card-body">
-        <form action="/item" method="post">
-          <input type="text" name="item" />
-          <input class="submit" type="submit" />
-        </form>
-      </div>
-    </div>
+    <h3 class="title">Add New Item</h3>
+    <form class="new-form" action="/item" method="post">
+      <input type="text" value="" name="item" />
+      <input class="submit" type="submit" />
+    </form>
+    <div class="card"><div class="card-body"></div></div>
     <footer class="bottomFooter"><% include ./partials/footer %></footer>
   </body>
 </html>
